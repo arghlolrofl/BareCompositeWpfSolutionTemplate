@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{57BDE800-50E8-46AA-846F-BE1A017DE470}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F3383C14-CF71-44A0-A4BD-67EF5EA632D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{4E769D4E-2731-46D2-9550-BA72A8D0E25B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Shell", "src\Nexus.Shell\Nexus.Shell.csproj", "{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{C82E5382-1D35-4EA1-A12D-3C3752461062}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{71DB2B32-3EB9-4430-8634-73F8738EBEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Shared", "src\Nexus.Shared\Nexus.Shared\Nexus.Shared.csproj", "{FE596743-BB22-41D4-B8AE-1FA989DAF815}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Contracts", "src\Nexus.Shared\Nexus.Contracts\Nexus.Contracts.csproj", "{8A394449-EFCB-491F-A06A-A189EACA642A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Modules.Sample", "src\Nexus.Modules\Nexus.Modules.Sample\Nexus.Modules.Sample.csproj", "{4ABD3E44-1E58-40DF-9513-61603A9D1481}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE596743-BB22-41D4-B8AE-1FA989DAF815}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE596743-BB22-41D4-B8AE-1FA989DAF815}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE596743-BB22-41D4-B8AE-1FA989DAF815}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE596743-BB22-41D4-B8AE-1FA989DAF815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A394449-EFCB-491F-A06A-A189EACA642A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A394449-EFCB-491F-A06A-A189EACA642A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A394449-EFCB-491F-A06A-A189EACA642A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A394449-EFCB-491F-A06A-A189EACA642A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20F26E06-4A6C-48A9-BD5A-2B5D5E34F7CF} = {57BDE800-50E8-46AA-846F-BE1A017DE470}
+		{FE596743-BB22-41D4-B8AE-1FA989DAF815} = {71DB2B32-3EB9-4430-8634-73F8738EBEBB}
+		{8A394449-EFCB-491F-A06A-A189EACA642A} = {71DB2B32-3EB9-4430-8634-73F8738EBEBB}
+		{4ABD3E44-1E58-40DF-9513-61603A9D1481} = {C82E5382-1D35-4EA1-A12D-3C3752461062}
+	EndGlobalSection
+EndGlobal
