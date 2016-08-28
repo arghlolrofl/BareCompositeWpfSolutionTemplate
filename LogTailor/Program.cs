@@ -17,6 +17,20 @@ namespace LogTailor
 #endif
 
             Console.WriteLine();
+            if (args.Length == 0) {
+                Settings.PrintHelp();
+                return;
+            }
+
+            // Parse config flags and slice them from command line args
+            Settings settings = new Settings();
+            try {
+                args = settings.SliceConfigFlags(args);
+            }
+            catch (Exception ex) {
+                Console.WriteLine("ERROR: " + ex.Message + Environment.NewLine);
+                return;
+            }
 
             // Check arguments and check if they are valid filesystem arguments
             FilesystemParameter param = new FilesystemParameter();
@@ -29,7 +43,7 @@ namespace LogTailor
             }
 
             // Create a list of tail watchers
-            List<Tailor> tailors = Tailor.Create(param);
+            List<Tailor> tailors = Tailor.Create(param, settings);
             if (tailors.Count == 0)
                 throw new ArgumentException("Error creating tailors!");
 
@@ -52,7 +66,7 @@ namespace LogTailor
                 tailTasks.Add(tailTask);
             }
 
-            Console.WriteLine("Items to watch: " + tailTasks.Count + Environment.NewLine);
+            Console.WriteLine("> Items to watch: " + tailTasks.Count + Environment.NewLine);
 
             // Start all tasks
             for (int i = 0; i < tailTasks.Count; i++) {

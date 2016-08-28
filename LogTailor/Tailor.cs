@@ -14,6 +14,7 @@ namespace LogTailor
         const string PATTERN_END = "$(?:[\\r\\n]?)(?![\\r\\n])";
 
         private static int nextTailorId = 0;
+        private static int sleepTime = 750;
 
         /// <summary>
         /// Creates a list of Tailor objects. Each one can
@@ -21,17 +22,20 @@ namespace LogTailor
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
-        public static List<Tailor> Create(FilesystemParameter param)
+        public static List<Tailor> Create(FilesystemParameter param, Settings settings)
         {
+            sleepTime = settings.RefreshTime;
+            Console.WriteLine("> Set sleep time to: " + sleepTime);
+
             List<Tailor> tailors = new List<Tailor>();
 
             foreach (FileSystemInfo fsInfo in param.FilesystemObjects) {
                 if (fsInfo is FileInfo)
-                    tailors.Add(new Tailor(fsInfo as FileInfo));
+                    tailors.Add(new Tailor(fsInfo as FileInfo, settings.LineCount));
 
                 if (fsInfo is DirectoryInfo)
                     foreach (FileInfo fileInDir in (fsInfo as DirectoryInfo).GetFiles("*.*", SearchOption.TopDirectoryOnly))
-                        tailors.Add(new Tailor(fileInDir));
+                        tailors.Add(new Tailor(fileInDir, settings.LineCount));
             }
 
             return tailors;
@@ -56,7 +60,7 @@ namespace LogTailor
             File = fileInfo;
             Id = nextTailorId++;
 
-            Console.WriteLine($"Created tail [{Id}] for '{File.FullName}'");
+            Console.WriteLine($"> Created tail [{Id}] for '{File.FullName}'");
             ReviewLastLines(lineCount);
         }
 
@@ -100,7 +104,7 @@ namespace LogTailor
                 long lastMaxOffset = reader.BaseStream.Length;
 
                 while (true) {
-                    Thread.Sleep(750);
+                    Thread.Sleep(sleepTime);
 
                     //if the file size has not changed, idle
                     if (reader.BaseStream.Length == lastMaxOffset)
