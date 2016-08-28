@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shell", "Shell", "{57BDE800-50E8-46AA-846F-BE1A017DE470}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Contracts", "src\Nexus.Shared\Nexus.Contracts\Nexus.Contracts.csproj", "{8A394449-EFCB-491F-A06A-A189EACA642A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexus.Modules.Sample", "src\Nexus.Modules\Nexus.Modules.Sample\Nexus.Modules.Sample.csproj", "{4ABD3E44-1E58-40DF-9513-61603A9D1481}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTailor", "LogTailor\LogTailor.csproj", "{43845FBF-FB8D-4B11-8DFE-36639E950E14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ABD3E44-1E58-40DF-9513-61603A9D1481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43845FBF-FB8D-4B11-8DFE-36639E950E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43845FBF-FB8D-4B11-8DFE-36639E950E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43845FBF-FB8D-4B11-8DFE-36639E950E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43845FBF-FB8D-4B11-8DFE-36639E950E14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
